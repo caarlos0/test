@@ -2,3 +2,6 @@ repo: caarlos0/test
 binary_name: test
 brew:
   repo: caarlos0/test
+  folder: Formulae
+archive:
+  format: zip
