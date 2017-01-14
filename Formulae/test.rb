@@ -1,9 +1,9 @@
 class Test < Formula
   desc "TODO"
   homepage "https://github.com/caarlos0/test"
-  url "https://github.com/caarlos0/test/releases/download/v0.2.0/test_Darwin_x86_64.zip"
-  version "v0.2.0"
-  sha256 "4f925039c1254e503df465e88676d14d66c8f82eb146dbb12c84418f38502c89"
+  url "https://github.com/caarlos0/test/releases/download/v0.2.1/test_macOS_64bits.zip"
+  version "v0.2.1"
+  sha256 "833f9dc699ffc87ff63e49afd4ec6b4ed069798975e6847d23d213faac5ee0fc"
 
   def install
     bin.install "test"
