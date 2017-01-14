@@ -5,3 +5,9 @@ brew:
   folder: Formulae
 archive:
   format: zip
+  replacements:
+    linux: Tux
+    darwin: macOS
+    windows: Windows
+    386: 32bits
+    amd64: 64bits
