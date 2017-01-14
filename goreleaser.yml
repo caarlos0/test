@@ -5,6 +5,7 @@ brew:
   folder: Formulae
 archive:
   format: zip
+  name_template: "{{.BinaryName}}-{{.Version}}-{{.Os}}-{{.Arch}}"
   replacements:
     linux: Tux
     darwin: macOS
