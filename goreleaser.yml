@@ -12,3 +12,8 @@ archive:
     windows: Windows
     386: 32bits
     amd64: 64bits
+build:
+  oses:
+    - darwin
+    - linux
+    - windows
