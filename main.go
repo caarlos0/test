@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
-
 func main() {
-	fmt.Println("test ;)")
+	var a = map[string]string{
+		"a": "b",
+		"b": "c",
+	}
+
+	for s, ss := range a {
+		println(s, ss)
+	}
 }
