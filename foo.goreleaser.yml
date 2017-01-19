@@ -6,8 +6,8 @@ archive:
     darwin: macOS
     amd64: 64bits
 build:
-  binary_name: test
-  main: ./main.go
+  binary_name: foo
+  main: ./foo/main.go
   goos:
     - darwin
   goarch:
