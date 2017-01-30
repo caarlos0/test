@@ -13,4 +13,4 @@ build:
     - amd64
 fpm:
   formats:
-    - name: deb
+    - deb
