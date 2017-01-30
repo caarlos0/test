@@ -9,8 +9,6 @@ archive:
 build:
   binary_name: test
   main: ./main.go
-  goos:
-    - darwin
   goarch:
     - amd64
 fpm:
