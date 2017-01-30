@@ -8,10 +8,9 @@ archive:
     amd64: 64bits
 build:
   binary_name: test
-  main: ./main.go
+  main: ./main.go`
   goarch:
     - amd64
 fpm:
   formats:
     - name: deb
-    - name: rpm
