@@ -13,4 +13,7 @@ build:
     - darwin
   goarch:
     - amd64
-
+fpm:
+  formats:
+    - name: deb
+    - name: rpm
