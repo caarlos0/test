@@ -1,5 +1,7 @@
 brew:
-  repo: caarlos0/homebrew-tap
+  github: 
+    owner: caarlos0
+    name: homebrew-tap
   folder: Formula
   caveats: "Test formula, dont use it. It doesnt do anything"
 archive:
@@ -7,7 +9,7 @@ archive:
     darwin: macOS
     amd64: 64bits
 build:
-  binary_name: test
+  binary: test
   main: ./main.go
   goarch:
     - amd64
