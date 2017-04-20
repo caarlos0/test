@@ -4,6 +4,9 @@ brew:
     name: homebrew-tap
   folder: Formula
   caveats: "Test formula, dont use it. It doesnt do anything"
+release:
+  github:
+    draft: true
 archive:
   replacements:
     darwin: macOS
@@ -11,8 +14,7 @@ archive:
 build:
   binary: test
   main: ./main.go
+  goos:
+    - darwin
   goarch:
     - amd64
-fpm:
-  formats:
-    - deb
