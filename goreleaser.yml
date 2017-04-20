@@ -1,5 +1,5 @@
 brew:
-  github: 
+  github:
     owner: caarlos0
     name: homebrew-tap
   folder: Formula
@@ -8,7 +8,7 @@ release:
   github:
     owner: caarlos0
     name: test
-    draft: true
+  draft: true
 archive:
   replacements:
     darwin: macOS
