@@ -8,7 +8,6 @@ release:
   github:
     owner: caarlos0
     name: test
-  draft: true
 archive:
   replacements:
     darwin: macOS
