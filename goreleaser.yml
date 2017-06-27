@@ -1,4 +1,20 @@
-name: almighty-test-repo
+builds:
+- binary: test
+  env:
+  - CGO_ENABLED=0
+  main: ./main.go
+  goos:
+  - darwin
+  goarch:
+  - amd64
+- binary_name: foo
+  env:
+  - CGO_ENABLED=0
+  main: ./foo/main.go
+  goos:
+  - darwin
+  goarch:
+  - amd64
 brew:
   github:
     owner: caarlos0
@@ -7,7 +23,7 @@ brew:
   caveats: "Test formula, dont use it. It doesnt do anything"
 fpm:
   formats:
-    - deb
+  - deb
 release:
   github:
     owner: caarlos0
@@ -16,16 +32,3 @@ archive:
   replacements:
     darwin: macOS
     amd64: 64bits
-builds:
-  - binary: test
-    main: ./main.go
-    goos:
-      - darwin
-    goarch:
-      - amd64
-  - binary_name: foo
-    main: ./foo/main.go
-    goos:
-      - darwin
-    goarch:
-      - amd64
