@@ -12,10 +12,16 @@ archive:
   replacements:
     darwin: macOS
     amd64: 64bits
-build:
-  binary: test
-  main: ./main.go
-  goos:
-    - darwin
-  goarch:
-    - amd64
+builds:
+  - binary: test
+    main: ./main.go
+    goos:
+      - darwin
+    goarch:
+      - amd64
+  - binary_name: foo
+    main: ./foo/main.go
+    goos:
+      - darwin
+    goarch:
+      - amd64
