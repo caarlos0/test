@@ -5,6 +5,7 @@ builds:
   main: ./main.go
   goos:
   - darwin
+  - linux
   goarch:
   - amd64
 - binary_name: foo
@@ -13,6 +14,7 @@ builds:
   main: ./foo/main.go
   goos:
   - darwin
+  - linux
   goarch:
   - amd64
 brew:
