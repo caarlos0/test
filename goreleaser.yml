@@ -1,9 +1,13 @@
+name: almighty-test-repo
 brew:
   github:
     owner: caarlos0
     name: homebrew-tap
   folder: Formula
   caveats: "Test formula, dont use it. It doesnt do anything"
+fpm:
+  formats:
+    - deb
 release:
   github:
     owner: caarlos0
