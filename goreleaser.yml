@@ -1,5 +1,6 @@
+name: aaaaaaaaa
 builds:
-- binary: test
+- binary: moises
   env:
   - CGO_ENABLED=0
   main: ./main.go
@@ -8,19 +9,20 @@ builds:
   - linux
   goarch:
   - amd64
-- binary_name: foo
+- binary: foo
   env:
   - CGO_ENABLED=0
   main: ./foo/main.go
   goos:
   - darwin
   - linux
+  - windows
   goarch:
   - amd64
 brew:
   github:
     owner: caarlos0
-    name: homebrew-tap
+    name: test
   folder: Formula
   caveats: "Test formula, dont use it. It doesnt do anything"
 fpm:
@@ -34,3 +36,7 @@ archive:
   replacements:
     darwin: macOS
     amd64: 64bits
+    windows: Windaum
+  format_overrides:
+    - goos: windows
+      format: zip
