@@ -19,6 +19,26 @@ builds:
   - windows
   goarch:
   - amd64
+  - 386
+- binary: bar
+  env:
+  - CGO_ENABLED=0
+  main: ./bar/main.go
+  goos:
+  - linux
+  - windows
+  goarch:
+  - amd64
+  - 386
+- binary: foobar
+  env:
+  - CGO_ENABLED=0
+  main: ./foobar/main.go
+  ignore:
+  - goos: darwin
+    goarch: amd64
+  - goos: linux
+    goarch: amd64
 brew:
   github:
     owner: caarlos0
@@ -39,4 +59,6 @@ archive:
     windows: Windaum
   format_overrides:
     - goos: windows
+      format: zip
+    - goos: darwin
       format: zip
