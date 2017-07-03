@@ -53,12 +53,8 @@ release:
     owner: caarlos0
     name: test
 archive:
+  format: binary
   replacements:
     darwin: macOS
     amd64: 64bits
     windows: Windaum
-  format_overrides:
-    - goos: windows
-      format: zip
-    - goos: darwin
-      format: zip
