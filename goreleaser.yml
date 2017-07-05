@@ -1,4 +1,4 @@
-name: aaaaaaaaa
+project_name: aaaaaaaaa
 builds:
 - binary: moises
   env:
