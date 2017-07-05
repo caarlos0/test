@@ -53,7 +53,7 @@ release:
     owner: caarlos0
     name: test
 archive:
-  format: binary
+  format: tar.gz
   replacements:
     darwin: macOS
     amd64: 64bits
