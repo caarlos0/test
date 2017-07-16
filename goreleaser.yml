@@ -56,7 +56,7 @@ release:
     owner: caarlos0
     name: test
 archive:
-  format: binary
+  # format: binary
   replacements:
     darwin: macOS
     amd64: 64bits
