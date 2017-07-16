@@ -45,7 +45,7 @@ brew:
     name: homebrew-tap
   folder: Formula
   caveats: "Test formula, dont use it. It doesnt do anything"
-  test: |4+
+  test: |2
     system "#{bin}/foo"
     system "#{bin}/moises"
 fpm:
