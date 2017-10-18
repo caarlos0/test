@@ -1,4 +1,8 @@
 project_name: aaaaaaaaa
+changelog:
+  filters:
+    exclude:
+      - (?i)moises
 builds:
 - binary: moises
   env:
