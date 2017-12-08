@@ -60,6 +60,7 @@ release:
     owner: caarlos0
     name: test
 archive:
+  name_template: '{{ .ProjectName }}-{{ .Version }}-{{ .Env.GOVERSION }}-{{ .Os }}_{{ .Arch }}'
   format: binary
   # replacements:
   #   darwin: macOS
