@@ -66,9 +66,9 @@ archive:
   #   amd64: 64bits
   #   windows: Windaum
 dockers:
-  - image: caarlos0/moises
-    binary: moises
-  - image: caarlos0/foo
-    binary: foo
-  - image: caarlos0/bar
-    binary: bar
+- image: caarlos0/moises
+  binary: moises
+- image: caarlos0/foo
+  binary: foo
+- image: caarlos0/bar
+  binary: bar
