@@ -1,0 +1,4 @@
+FROM scratch
+COPY bar /bar
+ENTRYPOINT ["/bar"]
+

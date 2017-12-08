@@ -1,0 +1,4 @@
+FROM scratch
+COPY moises /moises
+ENTRYPOINT ["/moises"]
+
