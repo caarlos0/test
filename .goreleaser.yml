@@ -68,10 +68,10 @@ archive:
 dockers:
 - image: caarlos0/moises
   binary: moises
-  Dockerfile: Dockerfile.moises
+  dockerfile: Dockerfile.moises
 - image: caarlos0/foo
   binary: foo
-  Dockerfile: Dockerfile.foo
+  dockerfile: Dockerfile.foo
 - image: caarlos0/bar
   binary: bar
-  Dockerfile: Dockerfile.bar
+  dockerfile: Dockerfile.bar
