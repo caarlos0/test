@@ -77,4 +77,4 @@ dockers:
   dockerfile: Dockerfile.bar
 snapshot:
   publish: true
-  name_template: {{.Tag}}-next-{{.Commit}}
+  name_template: '{{.Tag}}-next-{{.Commit}}'
