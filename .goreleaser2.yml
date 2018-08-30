@@ -52,7 +52,7 @@ brew:
   test: |
     system "#{bin}/foo"
     system "#{bin}/moises"
-fpm:
+nfpm:
   formats:
   - deb
 release:
@@ -75,3 +75,5 @@ dockers:
 - image: caarlos0/bar
   binary: bar
   dockerfile: Dockerfile.bar
+snapshot:
+  publish: true
