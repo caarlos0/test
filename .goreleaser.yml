@@ -41,9 +41,6 @@ archives:
     386: i386
     amd64: x86_64
   format: binary
-- binaries:
-    - moises
-    - bar
 checksum:
   name_template: 'checksums.txt'
 snapshot:
@@ -60,15 +57,6 @@ brews:
       name: test
     folder: Formula
     caveats: "Test formula, dont use it. It doesnt do anything"
-    test: |
-      system "#{bin}/foo"
-      system "#{bin}/moises"
-  - binaries:
-      - moises
-      - foo
-    github:
-      owner: caarlos0
-      name: test
 scoops:
   - binaries:
       - bar
