@@ -8,6 +8,7 @@ builds:
   goos:
   - darwin
   - linux
+  - windows
   goarch:
   - amd64
 - binary: foo
@@ -27,6 +28,7 @@ builds:
   main: ./bar/main.go
   goos:
   - linux
+  - darwin
   - windows
   goarch:
   - amd64
