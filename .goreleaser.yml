@@ -1,15 +1,47 @@
 # This is an example goreleaser.yaml file with some sane defaults.
 # Make sure to check the documentation at http://goreleaser.com
 builds:
-- env:
+- binary: moises
+  env:
   - CGO_ENABLED=0
-archive:
-  replacements:
+  main: ./main.go
+  goos:
+  - darwin
+  - linux
+  goarch:
+  - amd64
+- binary: foo
+  env:
+  - CGO_ENABLED=0
+  main: ./foo/main.go
+  goos:
+  - darwin
+  - linux
+  - windows
+  goarch:
+  - amd64
+  - 386
+- binary: bar
+  env:
+  - CGO_ENABLED=0
+  main: ./bar/main.go
+  goos:
+  - linux
+  - windows
+  goarch:
+  - amd64
+  - 386
+archives:
+- replacements:
     darwin: Darwin
     linux: Linux
     windows: Windows
     386: i386
     amd64: x86_64
+  format: binary
+- binaries:
+    - moises
+    - bar
 checksum:
   name_template: 'checksums.txt'
 snapshot:
@@ -20,3 +52,32 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
+brews:
+  - github:
+      owner: caarlos0
+      name: test
+    folder: Formula
+    caveats: "Test formula, dont use it. It doesnt do anything"
+    test: |
+      system "#{bin}/foo"
+      system "#{bin}/moises"
+  - binaries:
+      - bar
+      - foo
+    github:
+      owner: caarlos0
+      name: test
+scoops:
+  - binaries:
+      - bar
+      - foo
+    name: foobar
+    bucket:
+      owner: caarlos0
+      name: test
+  - binaries:
+      - moises
+    name: moises
+    bucket:
+      owner: caarlos0
+      name: test
