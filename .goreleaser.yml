@@ -62,7 +62,7 @@ brews:
       system "#{bin}/foo"
       system "#{bin}/moises"
   - binaries:
-      - bar
+      - moises
       - foo
     github:
       owner: caarlos0
