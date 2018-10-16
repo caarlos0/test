@@ -1,0 +1,80 @@
+project_name: aaaaaaaaa
+changelog:
+  filters:
+    exclude:
+      - (?i)moises
+builds:
+- binary: moises
+  env:
+  - CGO_ENABLED=0
+  main: ./main.go
+  goos:
+  - darwin
+  - linux
+  goarch:
+  - amd64
+- binary: foo
+  env:
+  - CGO_ENABLED=0
+  main: ./foo/main.go
+  goos:
+  - darwin
+  - linux
+  - windows
+  goarch:
+  - amd64
+  - 386
+- binary: bar
+  env:
+  - CGO_ENABLED=0
+  main: ./bar/main.go
+  goos:
+  - linux
+  - windows
+  goarch:
+  - amd64
+  - 386
+- binary: foobar
+  env:
+  - CGO_ENABLED=0
+  main: ./foobar/main.go
+  ignore:
+  - goos: darwin
+    goarch: amd64
+  - goos: linux
+    goarch: amd64
+brew:
+  github:
+    owner: caarlos0
+    name: homebrew-tap
+  folder: Formula
+  caveats: "Test formula, dont use it. It doesnt do anything"
+  test: |
+    system "#{bin}/foo"
+    system "#{bin}/moises"
+nfpm:
+  formats:
+  - deb
+release:
+  github:
+    owner: caarlos0
+    name: test
+archive:
+  name_template: '{{ .ProjectName }}-{{ .Version }}-{{ .Env.GOVERSION }}-{{ .Os }}_{{ .Arch }}'
+  replacements:
+    darwin: macOS
+    amd64: 64bits
+    windows: Windaum
+# dockers:
+# - image: caarlos0/moises
+#   binary: moises
+#   dockerfile: Dockerfile.moises
+# - image: caarlos0/foo
+#   binary: foo
+#   dockerfile: Dockerfile.foo
+# - image: caarlos0/bar
+#   binary: bar
+#   dockerfile: Dockerfile.bar
+# snapshot:
+#   publish: true
+#   name_template: '{{.Tag}}-next-{{.Commit}}'
