@@ -1,0 +1,25 @@
+# This is an example goreleaser.yaml file with some sane defaults.
+# Make sure to check the documentation at http://goreleaser.com
+builds:
+- binary: moises
+  env:
+  - CGO_ENABLED=0
+  main: ./main.go
+  goos:
+  - linux
+  goarch:
+  - amd64
+- binary: foo
+  env:
+  - CGO_ENABLED=0
+  main: ./foo/main.go
+  goos:
+  - linux
+  goarch:
+  - amd64
+dockers:
+- image: caarlos0/multiple
+  binaries:
+  - foo
+  - moises
+  dockerfile: Dockerfile.multiple

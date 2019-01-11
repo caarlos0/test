@@ -1,0 +1,3 @@
+FROM alpine
+COPY moises /bin/moises
+COPY foo /bin/foo
