@@ -59,23 +59,14 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
-brews:
-  - github:
+brew:
+    github:
       owner: caarlos0
       name: test
     folder: Formula
     caveats: "Test formula, dont use it. It doesnt do anything"
-scoops:
-  - binaries:
-      - bar
-      - foo
+scoop:
     name: foobar
-    bucket:
-      owner: caarlos0
-      name: test
-  - binaries:
-      - moises
-    name: moises
     bucket:
       owner: caarlos0
       name: test
