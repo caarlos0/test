@@ -1,8 +1,8 @@
 # These are supported funding model platforms
 
 github: [caarlos0]
-patreon: caarlos0
-open_collective: goreleaser
-ko_fi: # Replace with a single Ko-fi username
-tidelift: # Replace with a single Tidelift platform-name/package-name e.g., npm/babel
-custom: https://github.com
+#patreon: caarlos0
+#open_collective: goreleaser
+#ko_fi: # Replace with a single Ko-fi username
+#tidelift: # Replace with a single Tidelift platform-name/package-name e.g., npm/babel
+#custom: https://github.com
