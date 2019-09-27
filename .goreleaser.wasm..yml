@@ -1,0 +1,7 @@
+builds:
+- binary: moises
+  main: ./main.go
+  goos:
+  - js
+  goarch:
+  - wasm
