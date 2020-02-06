@@ -3,15 +3,17 @@
 github_urls:
   skip_tls_verify: true
 builds:
-- binary: moises
+- id: build1
+  binary: foo
   env:
   - CGO_ENABLED=0
   main: ./main.go
   goos:
-  - linux
+  - darwin
   goarch:
   - amd64
-- binary: foo
+- id: build2
+  binary: foo
   env:
   - CGO_ENABLED=0
   main: ./foo/main.go
@@ -20,8 +22,10 @@ builds:
   goarch:
   - amd64
 dockers:
-- image: caarlos0/multiple
+- image_templates:
+  - caarlos0/foo
   binaries:
   - foo
-  - moises
-  dockerfile: Dockerfile.multiple
+  builds:
+  - build2
+  dockerfile: Dockerfile.foo

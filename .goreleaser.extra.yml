@@ -1,0 +1,13 @@
+builds:
+- binary: moises
+  env:
+  - CGO_ENABLED=0
+  main: ./main.go
+  goos:
+  - darwin
+  goarch:
+  - amd64
+release:
+  extra_files:
+    go.mod: go.mod
+    foo.rb: ./Formula/test.rb

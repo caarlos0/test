@@ -1,0 +1,16 @@
+builds:
+- binary: moises
+  env:
+  - CGO_ENABLED=0
+  main: ./main.go
+  goos:
+  - darwin
+  goarch:
+  - amd64
+signs:
+- cmd: sh
+  signature: "${artifact}_hash"
+  args:
+  - '-c'
+  - 'sha256sum ${artifact} | cut -d " " -f 1 | tee ${signature}'
+  artifacts: all
