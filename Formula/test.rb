@@ -2,9 +2,18 @@
 class Test < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/test/releases/download/v5.6.0/test_5.6.0_Darwin_x86_64.tar.gz"
-  version "5.6.0"
-  sha256 "ccedfdc4d07f35ab9957a4400a017e9ca30df6a2b43549f7bedba1c56e137e53"
+  version "20.1.0"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/caarlos0/test/releases/download/v20.1.0/test_20.1.0_Darwin_x86_64.tar.gz"
+    sha256 "6734252bec02d6012086e3917219b1d2c4c98ff7c699fd13fbf19cc249117be2"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/test/releases/download/v20.1.0/test_20.1.0_Linux_x86_64.tar.gz"
+      sha256 "9f3cb7a5ca82f143f6c671e88b7f988f53616dd7c7b64feb1ad3a674834d1251"
+    end
+  end
 
   def install
     bin.install "moises"
