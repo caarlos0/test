@@ -1,22 +1,22 @@
 {
-    "version": "5.6.0",
+    "version": "20.1.0",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/caarlos0/test/releases/download/v5.6.0/test_5.6.0_Windows_i386.tar.gz",
+            "url": "https://github.com/caarlos0/test/releases/download/v20.1.0/test_20.1.0_Windows_i386.tar.gz",
             "bin": [
                 "foo.exe",
                 "bar.exe"
             ],
-            "hash": "a70af3fbd889621b5585823c0ca13478298296feab34cd8450add3adbf758fa2"
+            "hash": "c3705b9b0e95cd3f5f37286fdafe2840ee086bcd559f450b462b0ebd3bbcfc71"
         },
         "64bit": {
-            "url": "https://github.com/caarlos0/test/releases/download/v5.6.0/test_5.6.0_Windows_x86_64.tar.gz",
+            "url": "https://github.com/caarlos0/test/releases/download/v20.1.0/test_20.1.0_Windows_x86_64.tar.gz",
             "bin": [
                 "moises.exe",
                 "foo.exe",
                 "bar.exe"
             ],
-            "hash": "896414f748f217120401a25dd5c5c39253e6393559947fe16aaf9aa9d2960faf"
+            "hash": "b5ec859380de918b860c09b4d8d0fa8c6edbeadf563e87b93bbaa5c6eaacf533"
         }
     }
 }
