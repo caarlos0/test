@@ -2,6 +2,7 @@
 # Make sure to check the documentation at http://goreleaser.com
 builds:
 - binary: moises
+  id: moises
   env:
   - CGO_ENABLED=0
   main: ./main.go
@@ -12,6 +13,7 @@ builds:
   goarch:
   - amd64
 - binary: foo
+  id: foo
   env:
   - CGO_ENABLED=0
   main: ./foo/main.go
@@ -23,6 +25,7 @@ builds:
   - amd64
   - 386
 - binary: bar
+  id: bar
   env:
   - CGO_ENABLED=0
   main: ./bar/main.go
@@ -59,14 +62,14 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
-brew:
-    github:
-      owner: caarlos0
-      name: test
-    folder: Formula
-    caveats: "Test formula, dont use it. It doesnt do anything"
+brews:
+- github:
+    owner: caarlos0
+    name: test
+  folder: Formula
+  caveats: "Test formula, dont use it. It doesnt do anything"
 scoop:
-    name: foobar
-    bucket:
-      owner: caarlos0
-      name: test
+  name: foobar
+  bucket:
+    owner: caarlos0
+    name: test

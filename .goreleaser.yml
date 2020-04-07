@@ -7,3 +7,10 @@ builds:
   - linux
 changelog:
   skip: true
+# gitlab_urls:
+#   api: https://localhost:443/foo/bar
+#   download: https://localhost:443/downloads
+# release:
+#   gitlab:
+#     owner: foo
+#     name: bar
