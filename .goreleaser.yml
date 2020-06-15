@@ -2,11 +2,13 @@
 # Make sure to check the documentation at http://goreleaser.com
 builds:
 - env:
-  - CGO_ENABLED=0
+  - CGO_ENABLED=1
   goos:
   - linux
 changelog:
   skip: true
+snapshot:
+  name_template: '{{ .Tag | incminor }}-net'
 # gitlab_urls:
 #   api: https://localhost:443/foo/bar
 #   download: https://localhost:443/downloads
