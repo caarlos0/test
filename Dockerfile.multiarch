@@ -1,0 +1,4 @@
+ARG ARCH
+FROM ${ARG}/alpine
+COPY binary /usr/bin/binary
+ENTRYPOINT ["/usr/bin/binary"]
