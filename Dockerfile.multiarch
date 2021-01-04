@@ -1,4 +1,3 @@
-ARG ARCH
-FROM ${ARG}/alpine
-COPY binary /usr/bin/binary
-ENTRYPOINT ["/usr/bin/binary"]
+FROM alpine
+COPY mybin /usr/bin/mybin
+ENTRYPOINT ["/usr/bin/mybin"]
